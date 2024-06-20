@@ -1,0 +1,100 @@
+Test Suite: OpenWeather Site Interaction
+Description:
+This test suite aims to comprehensively validate critical functionalities and user interactions on the OpenWeather website using Cypress.
+
+Test Case 1: Visiting OpenWeather Site and Asserting URL
+Description:
+Verifies that navigating to the OpenWeather homepage results in the correct URL.
+
+Strategy:
+
+Use Cypress to visit 'https://openweathermap.org'.
+Assert that the current URL matches 'https://openweathermap.org/'.
+Rationale:
+This test ensures users are directed to the correct landing page without unexpected redirects, establishing foundational navigation integrity.
+
+Importance:
+Correct URL assertion is fundamental for ensuring users start their journey on the intended OpenWeather homepage, facilitating easy access to weather information and services.
+
+Test Case 2: Checking for Banner on OpenWeather Site
+Description:
+Ensures the visibility of the banner text on the OpenWeather homepage.
+
+Strategy:
+
+Use Cypress to visit 'https://openweathermap.org'.
+Check if the page contains the specific banner text: 'Weather forecasts, nowcasts and history in a fast and elegant way'.
+Rationale:
+Validating the presence of the banner ensures users are informed about the core capabilities of OpenWeather immediately upon landing on the site, enhancing user experience and engagement.
+
+Importance:
+The banner serves as a crucial introduction to OpenWeather's offerings, guiding users to utilize its weather forecasting and historical data services effectively.
+
+Test Case 3: Accepting Cookies on OpenWeather Site
+Description:
+Validates the functionality of accepting cookies on the OpenWeather site.
+
+Strategy:
+
+Use Cypress to visit 'https://openweathermap.org'.
+Check if the cookie consent popup is visible.
+If visible, simulate clicking on the acceptance button ('.stick-footer-panel__link').
+Assert that the URL remains 'https://openweathermap.org/' after accepting cookies.
+Rationale:
+Cookie acceptance ensures compliance with data privacy regulations and enhances user convenience by managing consent seamlessly.
+
+Importance:
+By ensuring smooth acceptance of cookies, this test supports legal compliance and improves user experience by minimizing interruptions during site interaction.
+
+Test Case 4: Searching for a City and Checking Weather Information
+Description:
+Tests the city search functionality on the OpenWeather site and verifies weather information display.
+
+Strategy:
+
+Use Cypress to visit 'https://openweathermap.org'.
+Enter the city name 'Delhi' in the search input field.
+Click on the 'Search' button.
+Click on the search result for 'Delhi, IN'.
+Verify that the weather information for Delhi is displayed in the current container.
+Rationale:
+City search functionality is essential for users to obtain localized weather updates, ensuring accurate retrieval and display of weather data is crucial for user utility.
+
+Importance:
+By validating city search, this test ensures that users can rely on OpenWeather for accurate and up-to-date weather information specific to their location of interest.
+
+Test Case 5: Navigating to a Specific Navigation Item (Top Navigation Test)
+Description:
+Tests navigation functionality by clicking on a specific item in the top navigation bar.
+
+Strategy:
+
+Use Cypress to visit 'https://openweathermap.org'.
+Accept cookies if the popup is visible.
+Click on the 'Maps' navigation item.
+Assert that the URL includes '/weathermap' after navigation.
+Rationale:
+Navigation testing ensures users can seamlessly explore different sections of the OpenWeather site, validating URL routing and user flow consistency.
+
+Importance:
+By verifying navigation, this test confirms that users can easily access specific features or information such as maps, enhancing overall usability and user satisfaction.
+
+Test Case 6: Verifying Subscription Plans and Pricing Information
+Description:
+Validates the visibility and correctness of subscription plans and pricing details on the OpenWeather Pricing page.
+
+Strategy:
+
+Use Cypress to visit 'https://openweathermap.org'.
+Accept cookies if the popup is visible.
+Click on the 'Pricing' link to navigate to the Pricing page.
+Assert that the URL contains '/price'.
+Check that various subscription plans ('Free', 'Starter', 'Developer', 'Professional', 'Enterprise') are visible and correctly displayed.
+Rationale:
+Understanding subscription options is critical for users evaluating service features and costs, ensuring transparency and facilitating informed decisions.
+
+Importance:
+By validating subscription plans, this test supports user decision-making by providing clear visibility into available features and pricing tiers offered by OpenWeather.
+
+Summary
+These Cypress test cases collectively ensure comprehensive validation of critical functionalities and user interactions on the OpenWeather website. By executing these tests, potential issues related to navigation errors, UI inconsistencies, data accuracy, and compliance with user consent requirements can be proactively identified and addressed. This approach supports enhanced user experience, site reliability, and adherence to best practices in web application testing. Each test contributes to ensuring that OpenWeather provides a seamless and informative platform for users seeking reliable weather forecasts and data.
